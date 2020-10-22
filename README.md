@@ -16,15 +16,15 @@ The workflow, usually declared in `.github/workflows/build.yml`, looks like:
 
 ```yaml
 on: push
-name: Main Workflow
+name: Code Static Analysis
 jobs:
   sonarQubeTrigger:
-    name: SonarQube Trigger
+    name: SonarQube Code Analysis
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: SonarQube Scan
-      uses: kitabisa/sonarqube-action@master
+      uses: fadhilthomas/sonarqube-action@master
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
 You can change the analysis base directory and/ project key _(allowed characters: letters, numbers, -, \_, . and :, with at least one non-digit.)_ by using the optional input like this:
 
 ```yaml
-uses: kitabisa/sonarqube-action@master
+uses: fadhilthomas/sonarqube-action@master
 with:
   projectBaseDir: "/path/to/my-custom-project"
   projectKey: "my-custom-project"

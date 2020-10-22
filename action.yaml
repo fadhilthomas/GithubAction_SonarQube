@@ -1,6 +1,5 @@
-name: "SonarQube Scan"
+name: "SonarQube Code Analysis"
 description: "Scan your code with SonarQube Scanner to detect bugs, vulnerabilities and code smells in more than 25 programming languages."
-author: "Dwi Siswanto"
 branding:
   icon: "check"
   color: "green"
